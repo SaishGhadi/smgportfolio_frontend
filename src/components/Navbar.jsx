@@ -1,47 +1,20 @@
 
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-
-    for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-    }
-
-  }
 
 
+function Navbar() {
+  return (
+    <Navbar>
+      <nav>
+        <h1>My App</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </Navbar>
+  );
+}
 
-<main>
-    <form onSubmit={handleSubmit}>
-        <input 
-        name="name"
-        type="text"
-         placeholder="Enter your name" 
-         required 
-         />
-
-        <input 
-        name="email"
-        type="email"
-        placeholder="Enter your email"
-        required
-         />
-
-        <input 
-        name="phone"
-        type="tel"
-        placeholder="Enter your phone number"
-        required
-         />
-
-        <textarea 
-        name="message"
-        placeholder="Enter your message"
-        required
-         />
-
-        <button type="submit">Submit</button>
-
-    </form>
-</main>
+export default Navbar;
